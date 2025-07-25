@@ -9,8 +9,9 @@ from environs import Env
 env = Env()
 env.read_env()
 
-# from middlewares.i18n import i18n_middleware
-# from aiogram_i18n.context import I18nContext
+from middlewares.i18n import i18n_middleware
+from aiogram_i18n.context import I18nContext
+
 API_TOKEN = env.str("API_TOKEN")
 
 # Configure logging
@@ -20,13 +21,15 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
-# i18n_middleware.setup(dispatcher=dp)
+i18n_middleware.setup(dispatcher=dp)
 
 
 @dp.message(Command("start"))
-async def send_welcome(message: types.Message):
-    await message.answer("Salom hammaga")
-    # await message.answer(i18n.gettext("start_text"), reply_markup=main_menu)
+async def send_welcome(message: types.Message, i18n: I18nContext):
+    i18n.set_locale(message.from_user.language_code)
+    print(message.from_user.language_code)
+    await message.answer(i18n("start_text"))
+
 
 @dp.message(F.text == 'nima')
 async def nima(message: types.Message):
