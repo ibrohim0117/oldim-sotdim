@@ -1,0 +1,1 @@
+start_text = Hello, welcome to the bot!
