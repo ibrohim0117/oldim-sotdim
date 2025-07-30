@@ -11,6 +11,7 @@ env.read_env()
 
 from middlewares.i18n import i18n_middleware
 from aiogram_i18n.context import I18nContext
+from keyboards.defoults import main_menu, category_menu
 
 API_TOKEN = env.str("API_TOKEN")
 
@@ -26,14 +27,17 @@ i18n_middleware.setup(dispatcher=dp)
 
 @dp.message(Command("start"))
 async def send_welcome(message: types.Message, i18n: I18nContext):
-    i18n.set_locale(message.from_user.language_code)
-    print(message.from_user.language_code)
-    await message.answer(i18n("start_text"))
+    await i18n.set_locale(message.from_user.language_code)
+    # print(message.from_user.language_code)
+    await message.answer(i18n("start_text"), reply_markup=main_menu)
 
 
-@dp.message(F.text == 'nima')
-async def nima(message: types.Message):
-    await message.answer("Qovun")
+@dp.message(F.text=='Sotib olaman 🚗')
+async def sale_car(msg: types.Message):
+    await msg.answer("Mashina kategoriyalari", reply_markup=category_menu)
+
+
+
 
 
 
