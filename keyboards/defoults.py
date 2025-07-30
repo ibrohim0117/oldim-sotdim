@@ -37,3 +37,13 @@ category_menu = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+new_or_old = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text='Yangi'),
+            KeyboardButton(text='Eski')
+        ]
+    ],
+    resize_keyboard=True
+)

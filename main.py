@@ -5,13 +5,16 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from environs import Env
 
+from middlewares.i18n import i18n_middleware
+from aiogram_i18n.context import I18nContext
+from keyboards.defoults import main_menu, category_menu, new_or_old
+
+from handlers.users import user_router
+from handlers.channel import nimadur_router
+
 # environs kutubxonasidan foydalanish
 env = Env()
 env.read_env()
-
-from middlewares.i18n import i18n_middleware
-from aiogram_i18n.context import I18nContext
-from keyboards.defoults import main_menu, category_menu
 
 API_TOKEN = env.str("API_TOKEN")
 
@@ -32,18 +35,10 @@ async def send_welcome(message: types.Message, i18n: I18nContext):
     await message.answer(i18n("start_text"), reply_markup=main_menu)
 
 
-@dp.message(F.text=='Sotib olaman 🚗')
-async def sale_car(msg: types.Message):
-    await msg.answer("Mashina kategoriyalari", reply_markup=category_menu)
-
-
-
-
-
-
-
 
 async def main():
+    dp.include_router(user_router)
+    dp.include_router(nimadur_router)
     await dp.start_polling(bot)
 
 
