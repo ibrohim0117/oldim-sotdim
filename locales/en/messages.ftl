@@ -1,1 +1,11 @@
 start_text = Hello, welcome to the bot!
+language = Choose the desired language!
+language_select = Language changed
+buy_button = Buy 🚗
+sell_button = Sell ＄
+my_ads_button = My listings ✉️
+language_button = Language (uz/ru/en) 🇬🇧
+contact_button = Contact us 📞
+lang_uz_button = UZ🇺🇿
+lang_ru_button = RU🇷🇺
+lang_en_button = EN🏴

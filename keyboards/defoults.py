@@ -1,21 +1,43 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram_i18n import I18nContext
 
-main_menu = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text='Sotib olaman 🚗'),
-            KeyboardButton(text='Sotaman ＄')
+
+def language_button(i18n: I18nContext) -> ReplyKeyboardMarkup:
+    _ = i18n
+
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_('lang_uz_button')),
+                KeyboardButton(text=_('lang_ru_button')),
+                KeyboardButton(text=_('lang_en_button')),
+            ]
         ],
-        [
-            KeyboardButton(text="Mening elonlarim ✉️")
+        resize_keyboard=True
+    )
+
+
+
+def main_menu(i18n: I18nContext) -> ReplyKeyboardMarkup:
+    _ = i18n
+
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_('buy_button')),
+                KeyboardButton(text=_('sell_button'))
+            ],
+            [
+                KeyboardButton(text=_('my_ads_button'))
+            ],
+            [
+                KeyboardButton(text=_('language_button')),
+                KeyboardButton(text=_('contact_button'))
+            ]
         ],
-        [
-            KeyboardButton(text='Til (uz/ru/en) 🇺🇿'),
-            KeyboardButton(text='Biz bilan aloqa 📞')
-        ]
-    ],
-    resize_keyboard=True
-)
+        resize_keyboard=True
+    )
+
 
 
 category_menu = ReplyKeyboardMarkup(

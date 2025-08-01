@@ -1,1 +1,11 @@
 start_text = Salom botga xush kelibsiz!
+language = Kerakli tilni tanlang!
+language_select = Til o'zgardi
+buy_button = Sotib olaman 🚗
+sell_button = Sotaman ＄
+my_ads_button = Mening elonlarim ✉️
+language_button = Til (uz/ru/en) 🇺🇿
+contact_button = Biz bilan aloqa 📞
+lang_uz_button = UZ🇺🇿
+lang_ru_button = RU🇷🇺
+lang_en_button = EN🏴
