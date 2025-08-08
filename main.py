@@ -12,6 +12,7 @@ from keyboards.defoults import main_menu, category_menu, new_or_old
 from handlers.users import user_router
 from handlers.channel import nimadur_router
 from handlers.utiltiy import utiltiy_router
+from handlers.sell import sell_router
 
 # environs kutubxonasidan foydalanish
 env = Env()
@@ -40,6 +41,7 @@ async def main():
     dp.include_router(user_router)
     dp.include_router(nimadur_router)
     dp.include_router(utiltiy_router)
+    dp.include_router(sell_router)
     await dp.start_polling(bot)
 
 
