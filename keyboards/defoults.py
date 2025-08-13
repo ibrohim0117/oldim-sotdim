@@ -73,6 +73,26 @@ category_menu = ReplyKeyboardMarkup(
     resize_keyboard=True
 )
 
+
+year_menyu = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text='2030 - 2025'),
+            KeyboardButton(text='2025 - 2020'),
+            KeyboardButton(text="2020 - 2015")
+        ],
+        [
+            KeyboardButton(text='2015 - 2010'),
+            KeyboardButton(text='2010 - 2005')
+        ],
+        [
+            KeyboardButton(text='2005 - 2000'),
+            KeyboardButton(text='2000 - 19...')
+        ]
+    ],
+    resize_keyboard=True
+)
+
 def region_menu(i18n: I18nContext) -> ReplyKeyboardMarkup:
     _ = i18n  # tarjima funksiyasi
 
@@ -110,6 +130,32 @@ def region_menu(i18n: I18nContext) -> ReplyKeyboardMarkup:
     )
 
 
+def mashina_tulovi(i18n: I18nContext) -> ReplyKeyboardMarkup:
+    _ = i18n  
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_('nasiya')),
+                KeyboardButton(text=_('naqt')),
+                KeyboardButton(text='bank')
+            ]
+        ],
+        resize_keyboard=True
+    )
+
+
+def mashina_holati(i18n: I18nContext) -> ReplyKeyboardMarkup:
+    _ = i18n  
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text=_('yangi')),
+                KeyboardButton(text=_('urtacha')),
+                KeyboardButton(text='eski')
+            ]
+        ],
+        resize_keyboard=True
+    )
 
 
 

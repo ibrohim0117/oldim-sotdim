@@ -4,6 +4,8 @@ import asyncio
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from environs import Env
+from aiogram.fsm.storage.memory import MemoryStorage
+
 
 from middlewares.i18n import i18n_middleware
 from aiogram_i18n.context import I18nContext
@@ -25,7 +27,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Initialize bot and dispatcher
 bot = Bot(token=API_TOKEN)
-dp = Dispatcher()
+dp = Dispatcher(storage=MemoryStorage())
 
 i18n_middleware.setup(dispatcher=dp)
 

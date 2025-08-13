@@ -9,10 +9,10 @@ contact_button = Biz bilan aloqa 📞
 lang_uz_button = UZ🇺🇿
 lang_ru_button = RU🇷🇺
 lang_en_button = EN🏴
+car_categories = Mashina kategoriyalari
 car_light_button = Mashina yengil
 car_heavy_button = Mashina og'ir
-car_categories = Mashina kategoriyalari
-tashkent_button = Toshkent viloyati
+tashkent_button = Toshkent shahri
 samarkand_button = Samarqand viloyati
 fergana_button = Farg‘ona viloyati
 andijan_button = Andijon viloyati
@@ -26,5 +26,11 @@ kashkadarya_button = Qashqadaryo viloyati
 khorezm_button = Xorazm viloyati
 karakalpakstan_button = Qoraqalpog‘iston Respublikasi
 region_list = O'z hududingizni tanlang!
+nasiya = Bo'lib to'lash to'lov
+naqt = Naqt to'lov
+bank = Bank orqali to'lov
+yangi = Yangi (Masla)
+urtacha = O'rtacha
+eski = Eski
 
 
