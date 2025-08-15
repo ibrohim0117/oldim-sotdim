@@ -1,18 +1,18 @@
-start_text = Hello, welcome to the bot!
-language = Choose the desired language!
+start_text = Welcome to the bot!
+language = Select the desired language!
 language_select = Language changed
 buy_button = Buy 🚗
 sell_button = Sell ＄
-my_ads_button = My listings ✉️
-language_button = Language (uz/ru/en) 🇬🇧
+my_ads_button = My ads ✉️
+language_button = Language (uz/ru/en) 🏴
 contact_button = Contact us 📞
 lang_uz_button = UZ🇺🇿
 lang_ru_button = RU🇷🇺
 lang_en_button = EN🏴
+car_categories = Car categories
 car_light_button = Light car
 car_heavy_button = Heavy car
-car_categories = Car categories
-tashkent_button = Tashkent region
+tashkent_button = Tashkent city
 samarkand_button = Samarkand region
 fergana_button = Fergana region
 andijan_button = Andijan region
@@ -26,6 +26,17 @@ kashkadarya_button = Kashkadarya region
 khorezm_button = Khorezm region
 karakalpakstan_button = Republic of Karakalpakstan
 region_list = Select your region!
-
-
-
+nasiya = Installment payment
+naqt = Cash payment
+bank = Bank payment
+yangi = New
+urtacha = Average
+eski = Old
+send_phone = Send phone number
+send_brand = Select car brand
+send_region = Which region does the car belong to?
+send_pay = How do you want to make the deal?
+car_price = Enter the estimated car price!
+car_year = Select the car's production year range!
+car_image = Send car photo!
+car_info = Write information about the car, for example, about installed equipment!

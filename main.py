@@ -9,7 +9,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 from middlewares.i18n import i18n_middleware
 from aiogram_i18n.context import I18nContext
-from keyboards.defoults import main_menu, category_menu, new_or_old
+from keyboards.defoults import main_menu, category_menu
 
 from handlers.users import user_router
 from handlers.channel import nimadur_router

@@ -158,14 +158,13 @@ def mashina_holati(i18n: I18nContext) -> ReplyKeyboardMarkup:
     )
 
 
+def send_contact(i18n: I18nContext) -> ReplyKeyboardMarkup:
+    _ = i18n
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [KeyboardButton(text=_('send_phone'), request_contact=True)]
+        ],
+        resize_keyboard=True
+    )
 
 
-new_or_old = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text='Yangi'),
-            KeyboardButton(text='Eski')
-        ]
-    ],
-    resize_keyboard=True
-)

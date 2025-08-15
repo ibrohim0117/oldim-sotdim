@@ -32,5 +32,13 @@ bank = Bank orqali to'lov
 yangi = Yangi (Masla)
 urtacha = O'rtacha
 eski = Eski
+send_phone = Telefon raqamni yuboring
+send_brand = Mashina markasini tanlang
+send_region = Mashina qaysi hududga tegishli?
+send_pay = Qanday usulda savdo qilmoqchisiz?
+car_price = Mashinaning taxminiy narxini kiriting!
+car_year = Mashina ishlab chiqarilgan yil oralig'ini tanlang!
+car_image = Mashina rasmini yuboring!
+car_info = Mashina haqida malumot yozing masalan o'rnatilgan jihozlar haqida!
 
 
